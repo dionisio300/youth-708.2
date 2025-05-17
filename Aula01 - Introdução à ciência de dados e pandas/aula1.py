@@ -165,4 +165,100 @@ for dado in dados:
         print(f"Nome: {dado['nome']} - Idade: {dado['idade']}")
 
 
+# instalação da biblioteca do Pandas
+# pip install pandas
+
+import pandas as pd
+
+# 1. Criando uma Series a partir de uma lista
+
+lista_notas = [10 , 8, 7]
+
+serie_notas = pd.Series(lista_notas)
+print(serie_notas)
+
+
+
+# 2. Definindo um índice personalizado
+
+indices = ['A','B','C']
+
+serie_notas = pd.Series(lista_notas,indices)
+print(serie_notas)
+
+
+# 3. Criando a partir de um dicionário
+
+serie_dados = pd.Series(dados)
+print(serie_dados)
+
+# 4. Criando a partir de um valor escalar (repetido)
+
+serie1 = pd.Series(5,[0,1,2,3,4,5])
+print(serie1)
+
+# 5. Usando o parâmetro dtype e name
+
+serie2 = pd.Series(data=lista_notas,index = indices,dtype='int64',name='notas')
+print(serie2)
+
+# Exemplos de DataFrame
+# 1. Criando um DataFrame a partir de um dicionário de listas
+
+dados = {
+    "nomes":['Ana','João','Maria'],
+    "idade":[23,35,31],
+    "notas":[8.5, 7, 9.2]
+}
+
+dataFrameDados = pd.DataFrame(dados)
+print(dataFrameDados)
+
+# 2. Definindo um índice personalizado
+indices = ['A','B','C']
+
+dataFrameDados2 = pd.DataFrame(dados,indices)
+print(dataFrameDados2)
+
+# 3. Criando a partir de uma lista de dicionários
+
+dados = [
+    {"nome":"Ana", "idade": 23, "nota":10},
+    {"nome":"João", "idade": 35, "nota":8},
+    {"nome":"Pedro", "idade": 23, "nota":6},
+]
+
+dataFrameDados3 = pd.DataFrame(dados)
+print(dataFrameDados3)
+
+# 5. Com uma única Series (coluna)
+lista_notas = [10 , 8, 7]
+
+dataFrameDados4 = pd.DataFrame(lista_notas,[1,2,3])
+print(dataFrameDados4)
+
+'''
+Atividades :
+
+Atividade 1: Crie uma lista com os nomes de cinco frutas e transforme essa lista em uma Series do pandas.
+
+Atividade 2: Crie uma lista com os valores de temperatura ao longo de 7 dias. Crie uma Series que use os dias da semana como índice.
+
+Atividade 3: Crie uma Series usando um dicionário onde as chaves são nomes de alunos e os valores são suas notas finais.
+
+Atividade 4: Crie uma Series com os números de 1 a 5 e defina índices personalizados em formato de letras.
+
+Atividade 5: Crie um dicionário com os dados de três pessoas contendo nome, idade e cidade. Use esse dicionário para criar um DataFrame.
+
+Atividade 6: Crie uma lista de dicionários representando três livros, com as chaves: "título", "autor", "ano". Use essa lista para criar um DataFrame.
+
+Atividade 7: Crie um DataFrame a partir de uma lista de listas. Os dados devem representar [nome, idade] de três pessoas. Defina os nomes das colunas como "Nome" e "Idade".
+
+Atividade 8: Crie um DataFrame usando um array do NumPy com números inteiros de 1 a 9, em uma matriz 3x3. Defina os nomes das colunas como "A", "B", "C".
+
+Atividade 9: Crie um DataFrame a partir de um dicionário de Series. Cada chave do dicionário deve representar uma coluna.
+
+'''
+
+
 
