@@ -49,7 +49,7 @@ plt.title('Histograma da idade')
 # Treemap
 grafico = px.treemap(census,path=['workclass','age'])
 grafico2 = px.treemap(census,path=['occupation','relationship','age'])
-# grafico2.show()
+grafico2.show()
 
 # plt.show()
 
@@ -101,6 +101,22 @@ X_census = oneHotEncoder_census.fit_transform(X_census).toarray()
 # print(X_census)
 print(X_census.shape)
 
+# Normalização
+from sklearn.preprocessing import MinMaxScaler
+
+# Instância do MinMaxScaler
+normalizacao = MinMaxScaler()
+X_Census_Normalizado = normalizacao.fit_transform(X_census)
+print(X_Census_Normalizado)
+
+
+#Separação de dados de treino e teste
+from sklearn.model_selection import train_test_split
+
+X_Census_treino, X_Census_teste,Y_Census_treino, Y_Census_teste = train_test_split(X_Census_Normalizado,Y_census, test_size=0.2, random_state=0)
+
+print(X_Census_treino.shape)
+print(X_Census_teste.shape)
 
 
 
