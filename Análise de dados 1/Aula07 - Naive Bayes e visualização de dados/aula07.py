@@ -123,5 +123,3 @@ print(X_Census_teste.shape)
 
 
 
-
-
