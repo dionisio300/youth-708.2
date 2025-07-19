@@ -43,6 +43,8 @@ tree.plot_tree(arvore_risco_credito,feature_names=previsores, class_names=[str(c
 
 plt.show()
 
+print()
+
 
 
 
