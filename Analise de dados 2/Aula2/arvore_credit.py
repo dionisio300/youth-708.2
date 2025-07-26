@@ -43,8 +43,10 @@ previsoes = random_forest_credit.predict(X_test)
 
 print(previsoes)
 
-from sklearn.metrics import accuracy_score, classification_report
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 acuracia = accuracy_score(Y_test, previsoes)
 print(acuracia)
 
 print(classification_report(Y_test, previsoes))
+
+print(f'Matriz de confusão: \n {confusion_matrix(Y_test,previsoes)}')
