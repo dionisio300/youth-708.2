@@ -48,4 +48,3 @@ print(classification_report(Y_test,previsoes))
 # Matriz de confusão
 print(f'Matriz de confusão: \n {confusion_matrix(Y_test,previsoes)}')
 
-
