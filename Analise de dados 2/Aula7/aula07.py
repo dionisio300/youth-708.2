@@ -47,9 +47,9 @@ casas.drop('date',axis=1, inplace=True)
 
 # print(casas.corr())
 
-# figura = plt.figure()
-# sns.heatmap(casas.corr(),annot=True)
-# plt.show()
+figura = plt.figure()
+sns.heatmap(casas.corr(),annot=True)
+plt.show()
 
 y_casas = casas.iloc[:,1].values
 x_casas = casas.iloc[:,4].values
